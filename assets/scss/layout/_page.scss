@@ -1,0 +1,62 @@
+html, body {
+  position: relative;
+}
+body {
+  overflow-x: hidden;
+}
+.all_wrapper {
+  min-height: calc(100vh - 10.4rem);
+  width: 100%;
+
+}
+section {
+  position: relative;
+}
+.wrapper{
+  max-width: $page-width;
+  margin:0 auto;
+  padding: 0 1rem;
+  position: relative;
+  .page-title {
+    margin-top: 0;
+  }
+}
+
+.col-half {
+  margin: 1rem 0 0;
+}
+@media #{$small-up} {
+  .row {
+    display: flex;
+    align-items: center;
+    margin: 0 -1rem;
+    .col-half {
+      margin: 1rem 1rem 0;
+      flex: 1 1;
+    }
+  }
+}
+
+.wide {
+  margin: 2rem -3rem 1rem;
+  display: flex;
+  align-items: center;
+  .col-half {
+    margin: 0 1rem;
+    flex: 1 1;
+  }
+  @media screen and (max-width: #{ $page-width + 20rem }) {
+    margin: 1rem -1rem;
+  }
+  @media screen and (max-width: #{ $page-width + 10rem }) {
+    margin: 1rem 0;
+  }
+  @media screen and (max-width: #{ $page-width }) {
+    flex-direction: column;
+  }
+}
+
+.section_image {
+  position: relative;
+  overflow: hidden;
+}

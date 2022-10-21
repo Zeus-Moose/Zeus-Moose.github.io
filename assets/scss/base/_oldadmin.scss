@@ -1,0 +1,400 @@
+.sub-menu.icons img {
+  margin: -10px 10px -10px -10px;
+  height: 50px;
+  width: 50px;
+  float: left;
+  object-fit: contain;
+  @media only screen and (max-width: 620px) {
+    margin: -8px 10px 0 -14px;
+    height: calc(3em + -8px);
+  }
+}
+.sub-menu.icons .noimg {
+  padding: 0 1rem 0 .5rem;
+}
+
+#admin-ajax-loading
+{
+  position: fixed;
+  right: 0.25rem;
+  top: 0.25rem;
+}
+.monkey {
+}
+.full-width
+{
+  width: 100%;
+}
+.shhh
+{
+  float: left;
+  clear: none;
+  margin-right: 1em;
+}
+#moreShhh {margin: 0;}
+.delete-button {
+  border:none !important;
+  background:#fff;
+  color:#f73b73;
+}
+.delete-image {
+  position: absolute;
+  display: block;
+  padding: 0;
+  line-height: 20px;
+  bottom: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #EEE;
+  border-radius: 0 1px 0 0;
+  border: 1px solid #DDD;
+  color: #F00 !important;
+  font-weight: bold;
+}
+.delete-image:hover {
+  background: #F00;
+  color: #FFF !important;
+}
+.view-link {
+  width: 3rem;
+  height: 3rem;
+  text-decoration: none;
+  font-size: 3rem;
+  margin-top: 1rem;
+  @media #{$medium-up} {
+    position: absolute;
+  }
+}
+.tasks input[type="checkbox"] {
+  float:none;
+  display: inline-block;
+  //margin: 7px 5px 0 0;
+  vertical-align: top;
+}
+.task-box label {
+  color: $black;
+  float:none;
+  display: inline;
+  margin: 0;
+  clear: none;
+}
+.task-details {
+  clear: both;
+  color: #555;
+  margin: 0;
+}
+.compnay-details {
+  clear: both;
+  color: #555;
+  margin: 10px 0px -20px 25px;
+}
+.task-info {
+  float: right;
+  font-size: 0.8em;
+  color: $grey-dark;
+  margin: -0.2rem 0;
+}
+.tasks .date {
+  color: #111;
+  cursor: default;
+  text-decoration: underline;
+}
+.tasks .isimporant {
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 3px;
+  vertical-align: middle;
+  box-shadow:0px 1px 3px #aaa;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #FFF;
+  transition: $animation;
+}
+.tasks .isimporant.yesitis {
+  background: #f73b73;
+  border-color: #f73b73;
+}
+.tasks .isimporant:hover {
+  border-color: #8cc63e;
+}
+.overdue, .soon {
+  color: #F00 !important;
+  font-weight: 700;
+}
+.task-box,
+.company-box {
+  transition: box-shadow ease-in-out 0.2s;
+  box-sizing: content-box;
+  margin: 0.5rem 0 1rem;
+  position: relative;
+  border-radius: $border-radius;
+  padding: .5rem 2rem .5rem .5rem;
+  background: $white;
+  border: $thin-border;
+  overflow: hidden;
+}
+.task-box h3, .company-box h3 {
+  font-weight: 200;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+.task-box h3 a, .company-box h3 a {
+  display: flex;
+  text-decoration: none;
+}
+.task-cat-icon {
+  float: left;
+  margin: -.5rem 1rem -.5rem -1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 1px 0 0 1px;
+  object-fit: contain;
+}
+
+.task-cat-icon-default {
+  float: left;
+  margin: -.2rem 1rem -.3rem -.5rem;
+  i {
+    font-size: 1.5rem;
+    color: $grey-dark;
+  }
+}
+
+.overflow {
+  max-height: 120px;
+}
+.overflow:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 15px;
+  height: 50px;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  pointer-events: none;
+}
+.checked.overflow:after {
+  background: linear-gradient(to bottom, rgba(236,255,236,0) 0%, $green-light 100%);
+}
+.overflow-toggled.overflow:after {
+  display: none !important;
+}
+.overflow-toggle {
+  position: absolute;
+  left: 0;
+  right: 14px;
+  bottom: 1px;
+  z-index: 2;
+  height: 40px;
+  color: #999;
+  cursor: pointer;
+  text-align: right;
+}
+.overflow-toggle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 10px solid $grey;
+  transition: $animation-time ease all;
+}
+.overflow-toggle:hover:after {
+  border-top-color: $grey-dark;
+}
+.overflow-toggled .overflow-toggle:after {
+  border: 10px solid transparent;
+  border-bottom: 10px solid $grey;
+  bottom: 10px;
+}
+.overflow-toggled .overflow-toggle:hover:after {
+  border-bottom-color: $grey-dark;
+}
+.overflow-toggled {
+  max-height: none !important;
+}
+.ui-sortable-helper {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.25);
+}
+.sortable-highlight {
+  height: 2.4rem !important;
+  padding: .25rem !important;
+  margin: .5rem 0 1rem;
+  background: #FAFAFA;
+  border-radius: 3px;
+}
+.handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.5rem;
+  height: 100%;
+  background: $grey-light;
+  border-right: .5rem solid $grey;
+  cursor: n-resize;
+  border-radius: $border-radius;
+  transition: $animation;
+  &:hover {
+    border-right-width: 1rem;
+  }
+}
+table.link-table
+{
+  width:100%;
+  margin: 1em 0;
+}
+table.link-table tr:hover td{
+  cursor: pointer;
+}
+.notshown {
+  background: #F3F3F3;
+}
+.admin-menu .checked,
+.checked label, .checked h3 a {
+  text-decoration: line-through !important;
+}
+.checked.task-box {
+  background: $green-light;
+}
+.checked .due {
+  display: none;
+}
+.image-edit {
+  border: 1px solid #CCC;
+  margin:10px auto;
+  display: block;
+}
+.video-edit {
+  max-width: 100%;
+  border: 1px solid #CCC;
+  margin:10px auto;
+  display: block;
+}
+.trumbowyg-box {
+  border-radius: 2px;
+  clear: both;
+}
+.trumbowyg-button-pane {
+  border-radius: 2px 2px 0 0;
+  background: #F6F6F6 !important;
+}
+.trumbowyg-box label {
+  float: none;
+}
+.trumbowyg-editor {
+  padding: 5px 10px;
+}
+
+.invoice_table .button,
+.invoice_table input {
+  margin:5px auto;
+}
+.invoiceFilter form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.invoiceFilter label
+{
+  margin-right: 10px;
+  clear: none;
+}
+.invoiceFilter input[type=submit]
+{
+  margin: 0.5rem 0.25rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.invoiceTotal
+{
+  text-align: right;
+  font-weight: 600;
+}
+.full-table {
+  table-layout: fixed;
+  width: 100%;
+  margin: auto;
+}
+.full-table td {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.login .loader
+{
+  margin: 1rem auto;
+}
+.password-reset {display: none;}
+.login .login-pw-back {
+  float: right;
+  margin-top: -3em;
+
+}
+.login .login-pw-reset {
+  float: right;
+  margin-top: -0.5em;
+
+}
+.password-reset-form {
+  margin: auto;
+  max-width: 100%;
+  width: 500px;
+  label,
+  input {
+    width: 100%;
+  }
+}
+
+#main.wrapper {
+  max-width: 100%;
+}
+@media only screen and (max-width:619px) {
+  .wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .main_block {
+    margin: 0;
+  }
+  .push {
+    height: 65px;
+  }
+  .overflow::after
+  {
+    right: 24px;
+  }
+  .overflow-toggle
+  {
+    right: 30px;
+  }
+
+  table
+  {
+    width: auto !important;
+    max-width: calc(100% + 20px);
+    overflow: scroll;
+    display: block;
+    margin: 1rem -10px !important;
+  }
+}
+.table-wrapper {
+}
+
+.folder-list .active {
+  font-weight: 600;
+}
+
+table.xdebug-error
+{
+  width: 100%;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+.full-size-iframe {
+  margin: -20px -20px -62px;
+  width: calc(100% + 40px);
+}

@@ -1,0 +1,199 @@
+/*
+.logo-moose-letters {
+  //transition: all ease-in-out 0.2s;
+  &:hover {
+    animation: ease-in-out .5s logo-moose-letters;
+  }
+}
+.logo-zeus-letters {
+  &:hover {
+    animation: ease-in-out .5s logo-zeus-letters;
+  }
+}
+@keyframes logo-moose-letters {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes logo-zeus-letters {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+*/
+
+#logo-moose-eye-r,
+#logo-moose-eye-l {
+  transform-origin: 58% 24%;
+}
+#logo-zeus-eye-l {
+  transform-origin: 50% 53.5%;
+}
+#logo-zeus-eye-r {
+  transform-origin: 50% 53%;
+}
+#footer-zeus-eye-l {
+  transform-origin: 58% 29%;
+}
+#footer-zeus-eye-r {
+  transform-origin: 58% 31%;
+}
+#footer-moose-eye-l {
+  transform-origin: 58% 47%;
+}
+#footer-moose-eye-r {
+  transform-origin: 58% 49%;
+}
+.hr-zeus-eye-r {
+  transform-origin: 50% 52%;
+}
+.hr-zeus-eye-l {
+  transform-origin: 50% 50%;
+}
+.hr-moose-eye-r {
+  transform-origin: 50% 58%;
+}
+.hr-moose-eye-l {
+  transform-origin: 50% 56%;
+}
+
+
+body.blink-zeus #logo-zeus,
+#logo-zeus:hover {
+  #logo-zeus-eye-r,
+  #logo-zeus-eye-l {
+    animation: blink ease-in-out 0.5s 1;
+  }
+}
+body.blink-moose #logo-moose,
+#logo-moose:hover {
+  #logo-moose-eye-r,
+  #logo-moose-eye-l {
+    animation: blink ease-in-out 0.5s 1;
+  }
+}
+
+body.blink-zeus #footer-zeus-peek,
+#footer-zeus-peek:hover {
+  #footer-zeus-eye-l,
+  #footer-zeus-eye-r {
+    animation: blink-footer ease-in-out 0.5s 1;
+  }
+}
+body.blink-moose #footer-moose-shrug,
+#footer-moose-shrug:hover {
+  #footer-moose-eye-l,
+  #footer-moose-eye-r {
+    animation: blink-footer ease-in-out 0.5s 1;
+  }
+}
+
+body.blink-zeus .hr-zeus,
+.hr-zeus:hover {
+  .hr-zeus-eye-r,
+  .hr-zeus-eye-l {
+    animation: blink ease-in-out 0.5s 1;
+  }
+}
+body.blink-moose .hr-moose,
+.hr-moose:hover {
+  .hr-moose-eye-r,
+  .hr-moose-eye-l {
+    animation: blink-footer ease-in-out 0.5s 1;
+  }
+}
+
+body.blink-moose #footer-moose-shrug,
+#footer-moose-shrug:hover {
+  #footer-moose-eye-l,
+  #footer-moose-eye-r {
+    animation: blink-footer ease-in-out 0.5s 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes blink-footer {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1) skewX(15deg);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+#logo-zeus-body {
+  transition: all ease-in-out 1s;
+  transform-origin: 13% 69%;
+}
+#logo-zeus:hover {
+  #logo-zeus-body {
+    transform: rotateZ(-10deg);
+  }
+}
+#logo-moose-face,
+#logo-moose .logo-moose-head {
+  transition: all ease-in-out 1s;
+  transform-origin: 69% 23%;
+}
+#logo-moose:hover {
+  .logo-moose-head {
+    transform: rotateZ(-10deg);
+  }
+}
+
+#footer-zeus-peek {
+  transition: all ease-in-out 2s;
+  &:hover {
+    transform: translateY(3rem);
+  }
+}
+
+.hr-zeus {
+  transition: all ease-in-out 1s;
+  transform-origin: 0% 100%;
+  &:hover {
+    transform: rotateZ(5deg);
+  }
+}
+.hr-moose {
+  transition: all ease-in-out 1s;
+  transform-origin: 100% 100%;
+  &:hover {
+    transform: rotateZ(-5deg);
+  }
+}
+#footer-moose-shrug {
+  .footer-moose-arm {
+    transition: all ease-in-out 0.5s;
+  }
+  &:hover {
+    .footer-moose-arm {
+      transform: translate(-0.1rem, -0.25rem);
+    }
+  }
+}

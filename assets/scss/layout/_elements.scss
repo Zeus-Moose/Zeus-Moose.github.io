@@ -1,0 +1,11 @@
+img, video, audio {
+  max-width: 100%;
+}
+
+video,
+audio {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: $box-shadow;
+}

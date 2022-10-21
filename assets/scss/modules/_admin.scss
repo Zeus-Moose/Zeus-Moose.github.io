@@ -1,0 +1,406 @@
+
+@mixin dialog {
+  background: $white;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  position: absolute;
+  width: 1500px;
+  height: 900px;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+@mixin dialog-wrapper {
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: rgba(255,255,255,0.75);
+  left:0;
+  right:0;
+  bottom: 0;
+  top:0;
+}
+@mixin progress-bar {
+
+}
+
+body.admin-page {
+  overflow-x: visible;
+  #main-container {
+    padding: 3rem 0 0;
+  }
+  #header-container {
+    display: none;
+  }
+}
+
+#admin {
+  @media #{$large-up} {
+    margin: 0 2rem;
+    display: grid;
+    & > aside:last-of-type {
+      margin-bottom: -12rem;
+    }
+    #asides {
+      position: sticky;
+      top: 3rem;
+    }
+  }
+  grid-template-columns: auto 25rem;
+  grid-gap: 3rem;
+  margin: 0 1rem;
+  .admin-menu {
+    grid-column: span 2;
+  }
+  .content {
+    grid-column: span 2;
+    margin: 2rem 0 0;
+  }
+  .content-aside {
+    margin: 2rem 0 0;
+    grid-row: 3 / 1;
+    & > h2 {
+      margin-top: 0;
+    }
+  }
+}
+@media #{$medium-up} {
+  #admin-full-form {
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    grid-column-gap: 2rem;
+    margin: 0 0 0 4rem;
+    & > .label-text:first-of-type {
+      max-width: 75rem;
+      width: 100%;
+      margin: auto;
+    }
+    .trumbowyg-box {
+      grid-area: 2 / 1 / 99 / 1
+    }
+  }
+}
+.admin-menu {
+  background: $grey-light;
+  padding: 0;
+  border-bottom: 1px solid $grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  .admin-menu-home {
+    flex: 0 0 auto;
+    img {
+      height: 1.75rem;
+      margin: -0.5rem 0;
+    }
+  }
+  a {
+    font-weight: 100;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-right: none;
+    border-bottom: 1px solid $grey;
+    position: relative;
+    margin-bottom: -1px;
+    white-space: nowrap;
+    &:hover {
+      background-color: $grey-very-light;
+    }
+  }
+  .sub-menu {
+    position: relative;
+    display: inline-block;
+    div {
+      white-space:nowrap;
+      position:absolute;
+      top: calc(100% + 1px);
+      background: #F6F6F6;
+      z-index: 999;
+      box-shadow: 0px 1px 3px #aaa;
+      display:none;
+      max-height: calc(100vh - 3rem);
+      overflow-y: auto;
+      a {
+        display:block;
+        border-right:none;
+        margin: 0;
+      }
+    }
+    &:hover div {
+      display: block;
+      transform: rotateX(0deg);
+    }
+    &.icons {
+      div a {
+        background-repeat: no-repeat;
+        background-position: 5px 55%;
+        background-size: 30px;
+      }
+      span {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.media-browser-wrapper {
+  @include dialog-wrapper;
+  .media-browser-window {
+    @include dialog;
+    color: #000;
+  }
+}
+#admin-loading {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 999;
+}
+.trumbowyg-editor {
+  @media #{$medium-up} {
+    padding: 2rem 10rem !important;
+  }
+  min-height: 20rem !important;
+}
+.trumbowyg-zm_imageLinked-button,
+.trumbowyg-zm_video-button,
+.trumbowyg-zm_image-button {
+  font-family: themify;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.trumbowyg-zm_imageLinked-button:before {
+  content: "\e71e";
+}
+.trumbowyg-zm_image-button:before {
+    content: "\e633";
+}
+.trumbowyg-zm_video-button:before {
+    content: "\e6cf";
+}
+.trumbowyg-box .trumbowyg-textarea {
+  font-size: $font-size;
+  line-height: 1.5em;
+}
+
+.edit-link {
+  text-decoration: none;
+  z-index: 5;
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  padding: .5rem;
+  font-size: 1.5rem;
+  min-width: 2rem;
+  height: 2rem;
+}
+.task-box .edit-link {
+  position: relative;
+  top: 0;
+  padding: 0.2rem 0 0 0;
+  vertical-align: middle;
+}
+
+.admin-buttons {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.admin-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem 0 0;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid $grey;
+  border-radius: $border-radius;
+  margin: 0 0.5rem 1rem  0.5rem;
+  text-align: center;
+  background: $grey-light;
+  text-decoration: none;
+  position: relative;
+  transition: $animation-time ease all;
+  &:hover {
+    box-shadow: 0 1px 3px $grey;
+  }
+  & span {
+    font-size: 2.2rem;
+  }
+  &:active {
+    transform: scale(0.97) translateY(3px);
+    box-shadow: 0 0 0 $grey;
+  }
+}
+@media screen and (max-width: 619px) {
+
+  .admin-button {
+    font-size: 0.9rem;
+    width: 5rem;
+    height: 4.5rem;
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+
+.invoiceDownloadLinks {
+  display: flex;
+  justify-content: space-between;
+}
+.formRow {
+  display: flex;
+  position: relative;
+  margin: .5em 0;
+  label {
+    margin: 0 2rem 0 0;
+  }
+  & > input:last-of-type {
+    margin: 0 0 0 auto;
+    align-self: center;
+  }
+}
+table.invoice_table {
+  form {
+    display: flex;
+    input {
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+// Media uploader
+
+.mediaUploadAjax {
+  width: 100%;
+}
+.progress-wrp {
+  display: none !important;
+  border: 1px solid $grey;
+  position: relative;
+  height: 2rem;
+  border-radius: $border-radius;
+  margin: 1rem 0;
+  text-align: left;
+  background: #fff;
+  //box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.12);
+  box-shadow: $box-shadow-inset;
+  .progress-bar{
+    height: 100%;
+    border-radius: $border-radius;
+    background-size: 2rem 2rem;
+    background-image: linear-gradient(
+                    45deg,
+                    rgba($green, 1)  25%,
+                    rgba($green, 0.5)       26%,
+                    rgba($green, 0.5)       50%,
+                    rgba($green, 1)  51%,
+                    rgba($green, 1)  75%,
+                    rgba($green, 0.5)       76%,
+                    rgba($green, 0.5)
+    );
+    animation: progress-animation 5s infinite linear;
+    width: 0;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.11);
+  }
+  &.complete .progress-bar {
+    background: $green;
+  }
+  .status{
+    top:3px;
+    left:50%;
+    position:absolute;
+    display:inline-block;
+    color: #000000;
+  }
+}
+@keyframes progress-animation {
+  from { background-position: 0 0; }
+  to   { background-position: -4rem 0; }
+}
+
+.dialog-content {
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3rem;
+  bottom: 0;
+  overflow: scroll;
+}
+.dialog-title-bar {
+  background: $grey-light;
+  box-shadow: $box-shadow;
+  border-radius: 0 0 $border-radius $border-radius;
+  font-size: .9rem;
+  @media #{$medium-up} {
+    font-size: 1rem;
+  }
+  .dialog-title,
+  a {
+    font-weight: 300;
+    border-right: 1px solid $grey;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    &.active {
+      border-left: 1px solid $grey;
+      background: $white;
+      box-shadow: 0 6px 3px $white;
+    }
+  }
+  a:hover {
+    background: $grey;
+  }
+
+  .dialog-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2.5rem;
+    width: 3rem;
+    border-left: 1px solid $grey;
+    &:hover {
+      background: $grey;
+      &:after {
+        color: $pink;
+      }
+    }
+    &:after {
+      font-style: normal;
+      font-size: 4rem;
+      top: 0.7rem;
+      color: #333;
+      display: block;
+      position: relative;
+      left: 0.3rem;
+      transform: rotate(45deg);
+      content: "+";
+    }
+  }
+}
+.browse-media-thumbnail {
+  width: 160px;
+  height: 160px;
+  i {
+    font-size: 6rem;
+    color: #888;
+    display: block;
+  }
+}

@@ -1,0 +1,68 @@
+#footer-wrapper {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -4rem;
+  z-index: 0;
+  @media #{$medium-up} {
+    margin-top: -6rem;
+  }
+}
+#footer-container {
+  font-size: .8em;
+  padding: 5px;
+  clip-path: polygon(0 0,0 100%,100% 100%, 100% 0);
+  overflow: hidden;
+  height: 14.4rem;
+  @media #{$medium-up} {
+    height: 16.4rem;
+  }
+  width: 60rem;
+  max-width: 140%;
+  position: relative;
+
+  #footer-inside {
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    z-index: 9;
+    left: 1rem;
+    max-width: calc(100vw - 2rem);
+  }
+  footer {
+    p {
+      margin: 0.5rem 0 0;
+      line-height: 1em;
+    }
+  }
+  #footer-background {
+    height: 19rem;
+    width: 100%;
+    position: absolute;
+    left: -7rem;
+    bottom: -12rem;
+    transform: rotate(15deg);
+    background: $grey-light;
+    border-top: $thick-border;
+    @media #{$small-up} {
+      bottom: -16rem;
+    }
+    @media #{$medium-up} {
+      height: 26em;
+    }
+  }
+}
+#zeus_peek {
+  position: relative;
+  z-index: 999;
+  top: -4.35rem;
+  left: 65%;
+  width: 5rem;
+  height: 5rem;
+}
+
+#main-container {
+  padding-bottom: 3rem;
+  z-index: 1;
+  position: relative;
+}
