@@ -12,42 +12,42 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'ZM-data-v1';
-var cacheName = 'ZM-final-1';
-var filesToCache = [
-    '/',
-    '/backdoor',
-    '/backdoor/crm',
-    '/assets/css/admin.css',
-    '/assets/css/themify-icons.css',
-    '/assets/js/zm.js',
-    '/assets/js/admin.js',
-    '/assets/img/zeus_moose_logo.svg'
-];
+const dataCacheName = 'ZM-data-v1'
+const cacheName = 'ZM-final-1'
+const filesToCache = [
+  '/',
+  '/backdoor',
+  '/backdoor/crm',
+  '/assets/css/admin.css',
+  '/assets/css/themify-icons.css',
+  '/assets/js/zm.js',
+  '/assets/js/admin.js',
+  '/assets/img/zeus_moose_logo.svg'
+]
 
-self.addEventListener('install', function(e) {
-    console.log('[ServiceWorker] Install');
-    e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            console.log('[ServiceWorker] Caching app shell');
-            return cache.addAll(filesToCache);
-        })
-    );
-});
+self.addEventListener('install', function (e) {
+  console.log('[ServiceWorker] Install')
+  e.waitUntil(
+    caches.open(cacheName).then(function (cache) {
+      console.log('[ServiceWorker] Caching app shell')
+      return cache.addAll(filesToCache)
+    })
+  )
+})
 
-self.addEventListener('activate', function(e) {
-    console.log('[ServiceWorker] Activate');
-    e.waitUntil(
-        caches.keys().then(function(keyList) {
-            return Promise.all(keyList.map(function(key) {
-                if (key !== cacheName && key !== dataCacheName) {
-                    console.log('[ServiceWorker] Removing old cache', key);
-                    return caches.delete(key);
-                }
-            }));
-        })
-    );
-    /*
+self.addEventListener('activate', function (e) {
+  console.log('[ServiceWorker] Activate')
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function (key) {
+        if (key !== cacheName && key !== dataCacheName) {
+          console.log('[ServiceWorker] Removing old cache', key)
+          return caches.delete(key)
+        }
+      }))
+    })
+  )
+  /*
      * Fixes a corner case in which the app wasn't returning the latest data.
      * You can reproduce the corner case by commenting out the line below and
      * then doing the following steps: 1) load app for first time so that the
@@ -57,5 +57,5 @@ self.addEventListener('activate', function(e) {
      * service worker is not yet activated. The code below essentially lets
      * you activate the service worker faster.
      */
-    return self.clients.claim();
-});
+  return self.clients.claim()
+})

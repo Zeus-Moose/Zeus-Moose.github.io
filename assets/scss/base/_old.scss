@@ -223,7 +223,7 @@ a:hover .img-title { display:block }
   background-position: 12px 50%;
   border:none;
 
-  background-image: url('~assets/img/icon_ok.png');
+  background-image: url('/img/icon_ok.png');
   background-color: #EFE;
   border-top: 1px solid #2f8f2f;
 
@@ -251,7 +251,7 @@ a:hover .img-title { display:block }
   animation-timing-function: linear;
   animation-duration: 6s;
   border-top: 2px solid #dc241f;
-  background-image: url('../img/icon_error.png');
+  background-image: url('/img/icon_error.png');
   background-color: #FDD;
   color: #000;
 }

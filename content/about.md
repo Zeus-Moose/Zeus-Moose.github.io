@@ -1,6 +1,6 @@
 ---
 title: I love combining technology and creativity
-description: 'I make websites, web-apps, and am passionate about bringing web technologies into the real world.'
+description: I make websites, web-apps, and am passionate about bringing web technologies into the real world.
 ---
 
 I make websites, web-apps, and am passionate about bringing web technologies into the real world.

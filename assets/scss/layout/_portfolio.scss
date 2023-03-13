@@ -205,4 +205,13 @@ body.noscript {
   display: block;
   z-index: -3;
   position: relative;
+  margin-top: 2rem;
+}
+
+.section_image_link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
