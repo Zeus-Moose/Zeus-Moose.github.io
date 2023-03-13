@@ -35,23 +35,24 @@
     min-height: 15rem;
     box-shadow: 0 0 1px 0 $black;
     h2 {
+      color: $pink;
+      font-weight: bold;
       font-size: 1.75rem;
       line-height: 1em;
       padding: 1rem;
       margin: 0;
       transition: all ease-in-out 0.5s;
       z-index: 1;
-      a {
-        text-decoration: none;
-        text-shadow: 1px 1px 3px $white;
-      }
+      text-shadow: 1px 1px 3px $white;
     }
     &:hover {
       z-index: 9;
       h2 {
-        a {
-          color: $green;
-        }
+        color: $green;
+        text-shadow: 1px 1px 3px $black;
+      }
+      .intro {
+        max-height: 100% !important;
       }
       .section_image:after {
         top: -200%;
@@ -62,8 +63,8 @@
 
   .block .intro {
     z-index: 2;
-    height: 0;
-    transition: height ease-in-out 0.5s;
+    max-height: 0;
+    transition: max-height ease-in-out 0.5s;
     p {
       bottom: 0;
       padding: 0 1rem 1rem;

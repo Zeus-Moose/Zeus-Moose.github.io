@@ -21,8 +21,20 @@ export default defineNuxtConfig({
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/zm.css'
+    '@/assets/scss/zm.scss',
   ],
+
+
+  // Import SASS variables if needed
+  // vite: {
+  //   css: {
+  //     preprocessorOptions: {
+  //       sass: {
+  //         additionalData: '@import "@/assets/scss/init.scss"',
+  //       },
+  //     },
+  //   },
+  // },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -37,10 +49,10 @@ export default defineNuxtConfig({
     '@nuxt/typescript-build',
     '@nuxtjs/style-resources'
   ],
-  
+
   styleResources: {
     scss: [
-      '~assets/scss/zm.scss',
+      '@/assets/scss/zm.scss',
     ]
   },
 
@@ -52,6 +64,9 @@ export default defineNuxtConfig({
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
+    markdown: {
+      anchorLinks: false
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

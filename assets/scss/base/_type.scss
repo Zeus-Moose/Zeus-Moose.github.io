@@ -95,35 +95,22 @@ hr {
   border: none;
   margin: 1rem 0;
 }
-hr.zeus-moose-hr {
+.zeus-moose-hr {
+  position: relative;
+  hr {
   height: 0;
   display: block;
   border: none;
   border-bottom: $thick-border;
   margin: 7rem 0 2rem;
   padding: 0;
-  position: relative;
-  //transform: rotate(5deg);
-  &:before {
-    content: "";
-    width: 8rem;
-    height: 8rem;
-    display: block;
-    //background: url("../../../static/assets/img/zeus_moose_looking.svg") no-repeat center bottom;
-    background-size: contain;
-    position: absolute;
-    right: 1rem;
-    bottom: 0;
   }
   svg {
     width: 8rem;
     display: block;
     position: absolute;
     right: 1rem;
-    bottom: 0;
-  }
-  &.svg-loaded:before {
-    background: none;
+    bottom: 5px;
   }
 }
 
