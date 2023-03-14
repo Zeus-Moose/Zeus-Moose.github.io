@@ -10,8 +10,8 @@
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "lintfix": "npm run lint:js -- --fix",
-    "predeploy": "nuxt build && nuxt generate",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "nuxt generate",
+    "deploy": "gh-pages -d dist -t true"
   },
   "dependencies": {
     "@nuxt/content": "^2.5.2",
