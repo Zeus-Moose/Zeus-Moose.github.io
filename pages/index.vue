@@ -29,7 +29,7 @@
 
   useHead({
     title: () => `Zeus Moose`,
-    description: () => '',
+    description: () => `Hi, I'm Ben. I have over fifteen year's experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.`,
   })
 </script>
 <script>

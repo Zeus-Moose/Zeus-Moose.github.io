@@ -6,13 +6,13 @@
           <Nuxt-link id="title" to="/">
             <h1><ZeusMooseLogo /><span>Zeus Moose</span></h1>
           </Nuxt-link>
-          <a
+          <button
             title="Menu"
             class="mobile-menu-toggle"
             @click="menuToggle"
             @mouseenter="menuEnter"
             @mouseleave="menuLeave"
-          ><span /><span /><span /></a>
+          ><span /><span /><span /></button>
           <nav
             id="main"
             :class="{ show: showMenu }"
