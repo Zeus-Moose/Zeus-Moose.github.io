@@ -2,21 +2,21 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url('~assets/fonts/OpenSansLight.woff') format('woff');
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('/assets/fonts/OpenSansLight.woff') format('woff');
   font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url('~assets/fonts/OpenSans.woff') format('woff');
+  src: local('Open Sans'), local('OpenSans'), url('/assets/fonts/OpenSans.woff') format('woff');
   font-display: swap;
 }
 @font-face {
  font-family: 'Open Sans';
  font-style: normal;
  font-weight: 800;
- src: local('Open Sans'), local('OpenSans'), url('~assets/fonts/OpenSansBold.woff') format('woff');
+ src: local('Open Sans'), local('OpenSans'), url('/assets/fonts/OpenSansBold.woff') format('woff');
 }
 
 html, body {
