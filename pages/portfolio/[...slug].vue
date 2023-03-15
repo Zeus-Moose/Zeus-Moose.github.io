@@ -14,8 +14,6 @@
       <nuxt-link class="back-to-portfolio-link" to="/#portfolio">‹ Back to portfolio</nuxt-link>
       <h3>Other work</h3>
       <div class="portfolio-grid">
-        <PortfolioCard key="portfolio-1" :portfolio="other[0]" />
-        <PortfolioCard key="portfolio-2" :portfolio="other[1]" />
       </div>
     </section>
   </div>
@@ -27,8 +25,10 @@
   const { data } = await useAsyncData(`portfolio-${path}`, () => {
     return queryContent().where({ _path: path }).findOne()
   })
-  var other = await queryContent('portfolio').where({ _path: {$not: path } }).only(['title', 'thumbnail', 'video_thumb', 'description', '_path']).find(`${path}`)
-  //other = other.sort(() => 0.5 - Math.random())
+  // const { other } = await useAsyncData(`portfolio`, () => {
+  //   const otherData = queryContent('portfolio').where({ _path: {$not: path } }).only(['title', 'thumbnail', 'video_thumb', 'description', '_path']).find(`${path}`)
+  //   return otherData.sort(() => 0.5 - Math.random())
+  // })
   
   useHead({
     title: () => `${data.value?.title} | Zeus Moose`,
