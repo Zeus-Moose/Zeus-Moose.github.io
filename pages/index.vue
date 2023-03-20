@@ -28,8 +28,10 @@
   const { data } = await useAsyncData(() => queryContent('/portfolio/').find())
 
   useHead({
-    title: () => `Zeus Moose`,
-    description: () => `Hi, I'm Ben. I have over fifteen year's experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.`,
+    title: `Zeus Moose`,
+    meta: [
+      { name: 'description', content: 'Hi, I\'m Ben. I have over fifteen year\'s experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.' }
+    ]
   })
 </script>
 <script>

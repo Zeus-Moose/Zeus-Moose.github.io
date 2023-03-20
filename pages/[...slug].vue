@@ -14,7 +14,7 @@
 
   useHead({
     title: () => `${data.value?.title} | Zeus Moose`,
-    description: () => data.value?.description,
+    meta: () => [{ name: 'description', content: data.value?.description }]
   })
 </script>
 

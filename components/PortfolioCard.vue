@@ -2,7 +2,8 @@
     <article class="block block_link mini_block" :class="cardSize">
         <div class="section_image">
             <video muted="true" autoplay="true" loop="true" :poster="`/assets/images/covers/${portfolio.thumbnail}`">
-                <source :src="`/assets/videos/${portfolio.video_thumb}`">
+                <source type="video/webm" :src="`/assets/videos/${portfolio.video_thumb}`">
+                <source type="video/mp4" :src="`/assets/videos/${portfolio.video_thumb.replace('.webm', '.mp4')}`">
             </video>
             <h2 v-html="portfolio.title"></h2>
             <div class="intro">
