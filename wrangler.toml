@@ -1,0 +1,8 @@
+name = "zeusmoose"
+account_id = "74223ae5b5650a59f78b11575a343041"
+workers_dev = true
+main = ".output/server/index.mjs"
+compatibility_date = "2023-03-15"
+
+[site]
+bucket = ".output/public"

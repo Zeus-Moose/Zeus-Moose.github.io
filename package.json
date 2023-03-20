@@ -10,8 +10,7 @@
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "lintfix": "npm run lint:js -- --fix",
-    "predeploy": "nuxt generate",
-    "deploy": "gh-pages -d dist -t true"
+    "deploy": "NITRO_PRESET=cloudflare npm run build && wrangler publish"
   },
   "dependencies": {
     "@nuxt/content": "^2.5.2",
