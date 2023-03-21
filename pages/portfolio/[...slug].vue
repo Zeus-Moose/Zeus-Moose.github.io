@@ -24,10 +24,18 @@
 
 
 <script setup>
+  const config = useRuntimeConfig()
+  
   const { path } = useRoute()
-  const { data: page } = await useAsyncData(() => {
+  const { data: page, error } = await useAsyncData(() => {
     return queryContent().where({ _path: path }).findOne()
   })
+  if (error.value) {
+    throw createError({
+      statusCode: 404,
+      message: 'not found',
+    })
+  }
   let { data: allContent } = await useAsyncData(() => {
     return queryContent('portfolio').only(['_id', 'title', 'thumbnail', 'video_thumb', 'description', '_path']).find()
   }, {
@@ -45,7 +53,11 @@
   
   useHead({
     title: () => `${page.value?.title} | Zeus Moose`,    
-    meta: () => [{ name: 'description', content: page.value?.description }]
+    meta: () => [
+      { name: 'description', content: page.value?.description },
+      { name: 'twitter:image', content: `${config.domain}assets/images/covers/${page.value?.image}`},
+      { name: 'og:image', content: `${config.domain}assets/images/covers/${page.value?.image}`},
+    ]
   })
 
 </script>

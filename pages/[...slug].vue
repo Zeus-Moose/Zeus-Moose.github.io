@@ -8,13 +8,23 @@
 
 <script setup>
   const { path } = useRoute()
-  const { data } = await useAsyncData(`${path}`, () => {
+  const { data, error } = await useAsyncData(`${path}`, () => {
     return queryContent().where({ _path: path }).findOne()
   })
+  if (error.value) {
+    throw createError({
+      statusCode: 404,
+      message: 'not found',
+    })
+  }
 
   useHead({
     title: () => `${data.value?.title} | Zeus Moose`,
-    meta: () => [{ name: 'description', content: data.value?.description }]
+    meta: () => [
+      { name: 'description', content: page.value?.description },
+      { name: 'twitter:image', content: `${config.domain}assets/images/zeus_moose.png`},
+      { name: 'og:image', content: `${config.domain}assets/images/zeus_moose.png`},
+    ]
   })
 </script>
 

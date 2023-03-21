@@ -30,7 +30,9 @@
   useHead({
     title: `Zeus Moose`,
     meta: [
-      { name: 'description', content: 'Hi, I\'m Ben. I have over fifteen year\'s experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.' }
+      { name: 'description', content: 'Hi, I\'m Ben. I have over fifteen year\'s experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.' },
+      { name: 'twitter:image', content: `${config.domain}assets/images/zeus_moose.png`},
+      { name: 'og:image', content: `${config.domain}assets/images/zeus_moose.png`},
     ]
   })
 </script>

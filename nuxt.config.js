@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   app: {
     head: {
@@ -11,7 +11,6 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
@@ -77,4 +76,20 @@ export default defineNuxtConfig({
   build: {
   },
 
+  
+  nitro: {
+    routeRules: {
+      routeRules: {
+        '/assets/**': { headers: { 'Cache-Control': 'max-age=31536000, immutable' } },
+      }
+      // '/api/v1/**': { cors: true, headers: { 'access-control-allow-methods': 'GET' } },
+      // '/old-page': { redirect: '/new-page' },
+    }
+  },
+
+  runtimeConfig: {
+    public: {
+      domain: 'https://zeusmoose.zeusmoose.workers.dev/',
+    }
+  }
 })

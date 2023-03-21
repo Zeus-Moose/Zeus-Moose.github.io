@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: I make websites, web-apps, and am passionate about bringing web technologies into the real world.
+description: 
 ---
 
 ### What information do you collect?
@@ -14,13 +14,12 @@ Any of the information we collect from you will be used to improve our website (
 
 No, we do not use cookies.
 
-
 ### Do we disclose any information to outside parties?
 
 We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.
 
 ### Where is the data stored?
-The servers are managed by OVH and located in France. Our email is managed by ProtonMail in Switzerland.
+This site is hosted by [CloudFlare](https://www.cloudflare.com/privacypolicy/) on their global network. Our email is managed by [ProtonMail](https://proton.me/) in Switzerland.
 
 ### Third party links
 
@@ -34,13 +33,10 @@ By using our site, you consent to our websites privacy policy.
 
 If we decide to change our privacy policy, we will post those changes on this page.
 
-This policy was last modified on 20th January 2022.
+This policy was last modified on 21st March 2023.
 
 ### Contacting us
 
 If there are any questions regarding this privacy policy you may contact us using the information below:
 
 hello@zeusmoose.com
-
-
-https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement
