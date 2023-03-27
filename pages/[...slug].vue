@@ -7,6 +7,8 @@
 
 
 <script setup>
+  const config = useRuntimeConfig()
+
   const { path } = useRoute()
   const { data, error } = await useAsyncData(`${path}`, () => {
     return queryContent().where({ _path: path }).findOne()

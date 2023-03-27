@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
 
   app: {
     head: {
@@ -74,17 +74,6 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  },
-
-  
-  nitro: {
-    routeRules: {
-      routeRules: {
-        '/assets/**': { headers: { 'Cache-Control': 'max-age=31536000, immutable' } },
-      }
-      // '/api/v1/**': { cors: true, headers: { 'access-control-allow-methods': 'GET' } },
-      // '/old-page': { redirect: '/new-page' },
-    }
   },
 
   runtimeConfig: {

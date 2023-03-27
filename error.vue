@@ -5,9 +5,7 @@
         <h1>Page not found</h1>
         <p>Unfortunately the page you requested could not be found. Despite their best efforts neither Zeus nor Moose could find it.</p>
         <p>
-          Maybe it never existed at all. <NuxtLink to="/">
-            Back to portfolio
-          </NuxtLink>.
+          Maybe it never existed at all. <NuxtLink to="/">Back to portfolio</NuxtLink>.
         </p>
       </div>
       <div v-else>

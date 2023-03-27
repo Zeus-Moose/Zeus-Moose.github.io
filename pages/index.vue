@@ -25,6 +25,8 @@
 
 
 <script setup>
+  const config = useRuntimeConfig()
+  
   const { data } = await useAsyncData(() => queryContent('/portfolio/').find())
 
   useHead({
