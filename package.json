@@ -9,8 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "lintfix": "npm run lint:js -- --fix",
-    "deploy": "NITRO_PRESET=cloudflare npm run build && wrangler publish"
+    "lintfix": "npm run lint:js -- --fix"
   },
   "dependencies": {
     "@nuxt/content": "^2.5.2",
@@ -31,9 +30,8 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.9.0",
     "fibers": "^5.0.3",
-    "gh-pages": "^5.0.0",
     "node-sass": "^8.0.0",
-    "nuxt": "^3.2.3",
+    "nuxt": "^3.3.3",
     "sass": "^1.59.2",
     "sass-loader": "^13.2.0"
   }
