@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: true,
-  
+  experimental: {payloadExtraction:false},
   app: {
     head: {
       title: 'Zeus Moose',
