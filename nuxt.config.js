@@ -2,7 +2,12 @@ export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: true,
-  experimental: {payloadExtraction:false},
+  experimental: {
+    payloadExtraction: false
+  },
+  generate:{
+      nojekyll: true,
+  },
   app: {
     head: {
       title: 'Zeus Moose',
@@ -76,10 +81,4 @@ export default defineNuxtConfig({
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-
-  runtimeConfig: {
-    public: {
-      domain: 'https://zeusmoose.zeusmoose.workers.dev/',
-    }
-  }
 })
