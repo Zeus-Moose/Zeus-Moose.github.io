@@ -1,4 +1,6 @@
 # zeus-moose
+The website for Zeus Moose
+
 
 ## Build Setup
 
@@ -15,6 +17,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# generate static project and deploy to Github Pages
+$ npm run deploy
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).

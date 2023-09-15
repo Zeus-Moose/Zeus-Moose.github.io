@@ -24,6 +24,7 @@
 
 
 <script setup>
+
   const config = useRuntimeConfig()
   
   const { path } = useRoute()

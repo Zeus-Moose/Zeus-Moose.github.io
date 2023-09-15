@@ -9,7 +9,7 @@
         </p>
       </div>
       <div v-else>
-        <h1>Uh oh! Error {{ error.statusCode }}</h1>
+        <h1>Error {{ error.statusCode }}</h1>
         <p>Unfortunately something has gone wrong.</p>
       </div>
     </div>
