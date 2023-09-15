@@ -60,24 +60,6 @@ function blink () {
 
 blink()
 
-// Wait for AJAX to load in SVGs
-// setTimeout(() => {
-//     document.getElementById('logo-zeus').addEventListener('mouseenter', () => {
-//         body.classList.remove('blink-moose');
-//         body.classList.add('blink-zeus');
-//         clearTimeout(blinkTimeout);
-//         whoBlinked = "zeus";
-//         blink();
-//     });
-//     document.getElementById('logo-moose').addEventListener('mouseenter', () => {
-//         body.classList.remove('blink-zeus');
-//         body.classList.add('blink-moose');
-//         clearTimeout(blinkTimeout);
-//         whoBlinked = "moose";
-//         blink();
-//     });
-// }, 1000);
-
 const homepageVideos = []
 let curVideo = -0
 
