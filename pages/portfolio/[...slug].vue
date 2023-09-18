@@ -25,7 +25,8 @@
 
 <script setup>
 
-  const config = useRuntimeConfig()
+  const config = useRequestURL()
+  const domain = url.protocol + url.hostname
   
   const { path } = useRoute()
   const { data: page, error } = await useAsyncData(() => {
@@ -55,9 +56,15 @@
   useHead({
     title: () => `${page.value?.title} | Zeus Moose`,    
     meta: () => [
+      { name: 'og:title', content: `${page.value?.title} | Zeus Moose` },
+      { name: 'twitter:title', content: `${page.value?.title} | Zeus Moose` },
+
       { name: 'description', content: page.value?.description },
-      { name: 'twitter:image', content: `${config.domain}assets/images/covers/${page.value?.image}`},
-      { name: 'og:image', content: `${config.domain}assets/images/covers/${page.value?.image}`},
+      { name: 'og:description', content: page.value?.description },
+      { name: 'twitter:description', content: page.value?.description },
+      
+      { name: 'og:image', content: `${domain}assets/images/covers/${page.value?.image}`},
+      { name: 'twitter:image', content: `${domain}assets/images/covers/${page.value?.image}`},
     ]
   })
 

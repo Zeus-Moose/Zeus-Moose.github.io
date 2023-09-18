@@ -23,7 +23,13 @@
   useHead({
     title: () => `${data.value?.title} | Zeus Moose`,
     meta: () => [
+      { name: 'og:title', content:  `${data.value?.title} | Zeus Moose` },
+      { name: 'twitter:title', content:  `${data.value?.title} | Zeus Moose` },
+
       { name: 'description', content: data.value?.description },
+      { name: 'og:description', content: data.value?.description },
+      { name: 'twitter:description', content: data.value?.description },
+      
       { name: 'twitter:image', content: `${config.domain}assets/images/zeus_moose.png`},
       { name: 'og:image', content: `${config.domain}assets/images/zeus_moose.png`},
     ]
