@@ -50,14 +50,28 @@ body { font-family: $font-family, sans; margin: 0; line-height: $line-height;}
 
 body, button, input, select, textarea { color: $black; }
 
-a { color: $pink; cursor: pointer; }
-a:hover { color: $green; }
-a:visited { }
-a:focus { outline: thin dotted; }
-
-/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: 0; }
-
+#header-wrapper {
+  a {
+    color: $pink;
+  }
+  a:hover {
+    color: $green;
+  }
+}
+#main-container, #footer-wrapper {
+  a {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+    border-bottom: 3px solid $pink;
+  }
+  a:hover {
+    border-bottom: 3px solid $green;
+    color: $black;
+  }
+  a:visited { }
+  a:focus { outline: thin dotted; }
+}
 
 p {
   word-wrap: break-word;

@@ -4,6 +4,7 @@ description:
 ---
 
 ### What information do you collect?
+
 We do not collect any personally identifiable information. We collect anonymised IP addresses, date & time, basic browser information, and similar information when you use our website.
 
 ### What do we use your information for?
@@ -19,7 +20,9 @@ No, we do not use cookies.
 We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.
 
 ### Where is the data stored?
-This site is hosted by [CloudFlare](https://www.cloudflare.com/privacypolicy/) on their global network. Our email is managed by [ProtonMail](https://proton.me/) in Switzerland.
+
+This Website is hosted as a [GitHub Pages website](https://help.github.com/en/github/site-policy/github-privacy-statement). GitHub may collect User Personal Information from visitors to this GitHub Pages website, including logs of visitor IP addresses, to comply with legal obligations, and to maintain the security and integrity of this Website and the Service.
+Our email is managed by [ProtonMail](https://proton.me/) in Switzerland.
 
 ### Third party links
 
@@ -33,10 +36,10 @@ By using our site, you consent to our websites privacy policy.
 
 If we decide to change our privacy policy, we will post those changes on this page.
 
-This policy was last modified on 21st March 2023.
+This policy was last modified on 19th September 2023.
 
 ### Contacting us
 
 If there are any questions regarding this privacy policy you may contact us using the information below:
 
-hello@zeusmoose.com
+[hello@zeusmoose.com](mailto:hello@zeusmoose.com)

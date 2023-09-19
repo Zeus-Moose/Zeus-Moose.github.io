@@ -27,6 +27,7 @@ nav#main {
   top: 100%;
   transition: all ease 0.5s;
   transform: scale(1, 0);
+  visibility: hidden;
   transform-origin: 50% 5px;
   text-align: center;
   z-index: 9999;
@@ -39,5 +40,6 @@ nav#main {
   }
   &.show {
     transform: scale(1, 1);
+    visibility: visible;
   }
 }
