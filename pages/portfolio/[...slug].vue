@@ -25,8 +25,8 @@
 
 <script setup>
 
-  const config = useRequestURL()
-  const domain = url.protocol + url.hostname
+  const domain = 'https://zeus-moose.github.io/'
+
   
   const { path } = useRoute()
   const { data: page, error } = await useAsyncData(() => {
@@ -56,14 +56,14 @@
   useHead({
     title: () => `${page.value?.title} | Zeus Moose`,    
     meta: () => [
-      { name: 'og:title', content: `${page.value?.title} | Zeus Moose` },
+      { property: 'og:title', content: `${page.value?.title} | Zeus Moose` },
       { name: 'twitter:title', content: `${page.value?.title} | Zeus Moose` },
 
       { name: 'description', content: page.value?.description },
-      { name: 'og:description', content: page.value?.description },
+      { property: 'og:description', content: page.value?.description },
       { name: 'twitter:description', content: page.value?.description },
       
-      { name: 'og:image', content: `${domain}assets/images/covers/${page.value?.image}`},
+      { property: 'og:image', content: `${domain}assets/images/covers/${page.value?.image}`},
       { name: 'twitter:image', content: `${domain}assets/images/covers/${page.value?.image}`},
     ]
   })

@@ -7,7 +7,7 @@
 
 
 <script setup>
-  const config = useRuntimeConfig()
+  const domain = 'https://zeus-moose.github.io/'
 
   const { path } = useRoute()
   const { data, error } = await useAsyncData(`${path}`, () => {
@@ -23,15 +23,15 @@
   useHead({
     title: () => `${data.value?.title} | Zeus Moose`,
     meta: () => [
-      { name: 'og:title', content:  `${data.value?.title} | Zeus Moose` },
+      { property: 'og:title', content:  `${data.value?.title} | Zeus Moose` },
       { name: 'twitter:title', content:  `${data.value?.title} | Zeus Moose` },
 
       { name: 'description', content: data.value?.description },
-      { name: 'og:description', content: data.value?.description },
+      { property: 'og:description', content: data.value?.description },
       { name: 'twitter:description', content: data.value?.description },
       
-      { name: 'twitter:image', content: `${config.domain}assets/images/zeus_moose.png`},
-      { name: 'og:image', content: `${config.domain}assets/images/zeus_moose.png`},
+      { name: 'twitter:image', content: `${domain}assets/images/zeus_moose.png`},
+      { property: 'og:image', content: `${domain}assets/images/zeus_moose.png`},
     ]
   })
 </script>

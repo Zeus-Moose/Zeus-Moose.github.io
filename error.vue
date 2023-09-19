@@ -18,6 +18,9 @@
 
 <script>
 export default {
-  props: ['error']
+  props: ['error'],
+  mounted() {
+    console.log(this.error)
+  }
 }
 </script>

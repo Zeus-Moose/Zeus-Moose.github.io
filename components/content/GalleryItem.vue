@@ -13,7 +13,7 @@
 <script>
 export default {
     props: ['title', 'image', 'thumb'],
-    created() {
+    muonted() {
         window.addEventListener('keyup', (event) => {
             if (event.key === 'Escape') {
                 this.closeModal()
