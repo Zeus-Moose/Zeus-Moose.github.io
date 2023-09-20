@@ -90,5 +90,11 @@ export default defineNuxtConfig({
           statusCode: 301,
         },
     },
+    "/portfolio/": {
+        redirect: {
+          to: "/#portfolio",
+          statusCode: 301,
+        },
+    },
   },
 })
