@@ -83,18 +83,18 @@ export default defineNuxtConfig({
     
   },
 
-  routeRules: {
-    "/portfolio": {
-        redirect: {
-          to: "/#portfolio",
-          statusCode: 301,
-        },
-    },
-    "/portfolio/": {
-        redirect: {
-          to: "/#portfolio",
-          statusCode: 301,
-        },
-    },
-  },
+  // router: {
+  //   options: {
+  //     strict: true,
+  //     trailingSlash: true,
+  //   },
+  // },
+  // routeRules: {
+  //   "/portfolio": {
+  //       redirect: {
+  //         to: "/#portfolio",
+  //         statusCode: 301,
+  //       },
+  //   },
+  // },
 })
