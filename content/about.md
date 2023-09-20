@@ -18,13 +18,13 @@ Like acronyms and buzz-words? Here's a list of the main technologies and tools I
 
 - PHP
 - MySQL
-- JavaScript (ES6 and jQuery)
+- JavaScript
 - Wordpress
 - Drupal 7 & 8
 - React
+- Vue (with NUXT)
 - CSS with SASS/LESS
 - Adobe Creative Suite/Cloud
-- Git
 - LAMP stack administration
 - AWS (S3, RDS, Cloudfront)
 - Cloudflare (including Workers)

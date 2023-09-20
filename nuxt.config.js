@@ -82,4 +82,13 @@ export default defineNuxtConfig({
   build: {
     
   },
+
+  routeRules: {
+    "/portfolio": {
+        redirect: {
+          to: "/#portfolio",
+          statusCode: 301,
+        },
+    },
+  },
 })
