@@ -70,14 +70,14 @@
 }
 
 
-body.blink-zeus #logo-zeus,
+.blink-zeus #logo-zeus,
 #logo-zeus:hover {
   #logo-zeus-eye-r,
   #logo-zeus-eye-l {
     animation: blink ease-in-out 0.5s 1;
   }
 }
-body.blink-moose #logo-moose,
+.blink-moose #logo-moose,
 #logo-moose:hover {
   #logo-moose-eye-r,
   #logo-moose-eye-l {
@@ -85,14 +85,14 @@ body.blink-moose #logo-moose,
   }
 }
 
-body.blink-zeus #footer-zeus-peek,
+.blink-zeus #footer-zeus-peek,
 #footer-zeus-peek:hover {
   #footer-zeus-eye-l,
   #footer-zeus-eye-r {
     animation: blink-footer ease-in-out 0.5s 1;
   }
 }
-body.blink-moose #footer-moose-shrug,
+.blink-moose #footer-moose-shrug,
 #footer-moose-shrug:hover {
   #footer-moose-eye-l,
   #footer-moose-eye-r {
@@ -100,14 +100,14 @@ body.blink-moose #footer-moose-shrug,
   }
 }
 
-body.blink-zeus .hr-zeus,
+.blink-zeus .hr-zeus,
 .hr-zeus:hover {
   .hr-zeus-eye-r,
   .hr-zeus-eye-l {
     animation: blink ease-in-out 0.5s 1;
   }
 }
-body.blink-moose .hr-moose,
+.blink-moose .hr-moose,
 .hr-moose:hover {
   .hr-moose-eye-r,
   .hr-moose-eye-l {
@@ -115,7 +115,7 @@ body.blink-moose .hr-moose,
   }
 }
 
-body.blink-moose #footer-moose-shrug,
+.blink-moose #footer-moose-shrug,
 #footer-moose-shrug:hover {
   #footer-moose-eye-l,
   #footer-moose-eye-r {

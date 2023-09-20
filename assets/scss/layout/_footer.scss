@@ -55,14 +55,23 @@
 #zeus_peek {
   position: relative;
   z-index: 999;
-  top: -5.5em;
+  top: -5.4em;
   left: 65%;
   width: 5rem;
   height: 5rem;
+  &.moose_shrug {
+    top: -7.1rem;
+    width: 6rem;
+  }
 }
 
 #main-container {
   padding-bottom: 3rem;
   z-index: 1;
   position: relative;
+}
+
+.footer-small {
+  font-size: 0.9em;
+  padding-top: 0.5rem;
 }

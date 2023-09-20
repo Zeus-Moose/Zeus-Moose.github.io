@@ -6,26 +6,6 @@ Array.from(document.querySelectorAll('.message')).forEach((item) => {
   })
 })
 
-// Replace SVGs with inline versions
-Array.from(document.getElementsByClassName('svg')).forEach((item) => {
-  fetch(item.src)
-    .then((data) => { return data.text() })
-    .then((image) => {
-      item.outerHTML = image
-      item.classList.add('svg-loaded')
-    })
-})
-
-// Prepend HR with custom SVG
-Array.from(document.getElementsByClassName('zeus-moose-hr')).forEach((item) => {
-  fetch(baseRoot + '/assets/img/zeus_moose_looking.svg')
-    .then((data) => { return data.text() })
-    .then((image) => {
-      item.innerHTML = image
-      item.classList.add('svg-loaded')
-    })
-})
-
 let hashTagActive = ''
 const menuItems = document.querySelector('body.portfolio nav#main .scroll')
 if (menuItems) {
@@ -38,27 +18,6 @@ if (menuItems) {
     }
   })
 }
-
-let blinkTimeout
-let whoBlinked = 'zeus'
-
-function blink () {
-  const rand = Math.round(Math.random() * 6000) + 3000
-  blinkTimeout = setTimeout(function () {
-    if (whoBlinked === 'moose') {
-      body.classList.remove('blink-moose')
-      body.classList.add('blink-zeus')
-      whoBlinked = 'zeus'
-    } else {
-      body.classList.add('blink-moose')
-      body.classList.remove('blink-zeus')
-      whoBlinked = 'moose'
-    }
-    blink()
-  }, rand)
-}
-
-blink()
 
 const homepageVideos = []
 let curVideo = -0
@@ -110,36 +69,3 @@ function pauseAll () {
     item.pause()
   })
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const modalWrapper = document.createElement('div')
-  modalWrapper.id = 'modalWrapper'
-  const modal = document.createElement('div')
-  modal.classList.add('modal')
-  modalWrapper.appendChild(modal)
-  body.appendChild(modalWrapper)
-
-  modalWrapper.addEventListener('click', () => {
-    modalWrapper.classList.remove('modalOpen')
-  })
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      modalWrapper.classList.remove('modalOpen')
-    }
-  })
-
-  Array.from(document.querySelectorAll('.gallery a')).forEach((item) => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault()
-      const image = document.createElement('img')
-      image.src = item.href
-      const caption = document.createElement('p')
-      caption.innerText = item.title
-      modal.innerHTML = ''
-      modal.appendChild(image)
-      modal.appendChild(caption)
-      modalWrapper.classList.add('modalOpen')
-    })
-  })
-})

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{'blink-zeus': (whoBlinked === 'zeus'), 'blink-moose': (whoBlinked === 'moose')}">
     <div class="all_wrapper">
       <div id="header-wrapper">
         <header id="header-container">
@@ -29,19 +29,19 @@
           </nav>
         </header>
       </div>
-      <div id="main-container" class="">
+      <div id="main-container">
         <slot />
       </div> <!-- #main-container -->
     </div><!-- #all_wrapper -->
     <div id="footer-wrapper">
       <div id="footer-container">
-        <footer id="footer-inside" class="">
+        <footer id="footer-inside">
           <p>
             <a href="mailto:hello@zeusmoose.com">hello@zeusmoose.com</a> &bull; <NuxtLink to="/privacy">
               privacy policy
             </NuxtLink>
           </p>
-          <p>
+          <p class="footer-small">
             unless otherwise stated, all content <span class="copyright">©</span> {{ new Date().getFullYear()
             }} Ben
             Newton
@@ -49,8 +49,8 @@
         </footer>
         <div id="footer-middle" />
         <div id="footer-background">
-          <div id="zeus_peek">
-            <ZeusPeek v-if="true" />
+          <div id="zeus_peek" :class="error ? 'moose_shrug' : ''">
+            <ZeusPeek v-if="!error" />
             <MooseShrug v-else />
           </div>
         </div>
@@ -76,11 +76,13 @@ export default {
     ZeusPeek,
     MooseShrug
   },
-  props: ['error'],
   data () {
     return {
       menuTimer: null,
-      showMenu: false
+      showMenu: false,
+      whoBlinked: 'zeus',
+      blinkTimeout: null,
+      error: useState('siteError'),
     }
   },
   watch: {
@@ -89,19 +91,28 @@ export default {
     }
   },
   methods: {
-    menuLeave () {
-      console.log(this.error)
+    menuLeave() {
       clearTimeout(this.menuTimer)
       this.menuTimer = setTimeout(() => {
         this.showMenu = false
       }, 500)
     },
-    menuEnter () {
+    menuEnter() {
       clearTimeout(this.menuTimer)
     },
-    menuToggle () {
+    menuToggle() {
       this.showMenu = !this.showMenu
-    }
+    },
+    blink() {
+      const rand = Math.round(Math.random() * 6000) + 3000
+      this.blinkTimeout = setTimeout(() => {
+        this.whoBlinked = (this.whoBlinked === 'zeus' ? 'moose' : 'zeus')
+        this.blink()
+      }, rand)
+    },
+  },
+  mounted() {
+    this.blink()
   }
 }
 </script>

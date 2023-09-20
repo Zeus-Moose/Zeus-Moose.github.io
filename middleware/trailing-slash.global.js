@@ -1,7 +1,6 @@
 export default function ({ path, query, hash }) {
     if (path === "/" || !path.endsWith("/")) return
 
-    console.log(path)
     let nextPath = path.replace(/\/+$/, "") || "/"
     if (nextPath === "/portfolio") {
         nextPath = '/'
@@ -9,6 +8,6 @@ export default function ({ path, query, hash }) {
     }
     const nextRoute = { path: nextPath, query, hash }
   
-    return navigateTo(nextRoute, { redirectCode: 302 })
+    return navigateTo(nextRoute, { redirectCode: 301 })
   }
   
