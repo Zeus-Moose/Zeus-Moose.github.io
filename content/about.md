@@ -6,11 +6,11 @@ description: I make websites, web-apps, and am passionate about bringing web tec
 
 I make websites, web-apps, and am passionate about bringing web technologies into the real world.
 
-### Creativity
+## Creativity
 
 I have a degree in Digital Screen Arts, and enjoy using my skills to help clients develop their ideas into something they love.
 
-### Technology
+## Technology
 
 For most of my website projects I use WordPress or Drupal, but I'm also keen to promote the expansion of web technologies beyond the web, like with Ever After where I created an interactive exhibition running on a series of web pages.
 
