@@ -13,11 +13,11 @@
     "lintfix": "npm run lint:js -- --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^2.5.2",
+    "@nuxt/content": "^2.8.5",
     "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.29.0",
+    "core-js": "^3.33.0",
     "gh-pages": "^6.0.0",
-    "nuxt": "^3.3.3",
+    "nuxt": "^3.7.4",
     "vue": "^3.2.47",
     "vue-server-renderer": "^2.7.14",
     "vue-template-compiler": "^2.7.14",
@@ -29,12 +29,12 @@
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
     "@nuxtjs/style-resources": "^1.2.1",
-    "eslint": "^8.36.0",
+    "eslint": "^8.51.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.9.0",
     "fibers": "^5.0.3",
     "node-sass": "^8.0.0",
-    "sass": "^1.59.2",
+    "sass": "^1.69.3",
     "sass-loader": "^13.2.0"
   }
 }

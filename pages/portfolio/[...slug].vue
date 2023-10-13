@@ -15,8 +15,8 @@
       <nuxt-link class="back-to-portfolio-link" to="/#portfolio">‹ Back to portfolio</nuxt-link>
       <h3>Other work</h3>
       <div class="portfolio-grid">
-        <PortfolioCard key="portfolio-1" :portfolio="allContent[0]" />
-        <PortfolioCard key="portfolio-2" :portfolio="allContent[1]" />
+        <PortfolioCard key="portfolio-1" :playing="true" :portfolio="allContent[0]" />
+        <PortfolioCard key="portfolio-2" :playing="true" :portfolio="allContent[1]" />
       </div>
     </section>
   </div>

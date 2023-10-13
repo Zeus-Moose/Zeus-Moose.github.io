@@ -8,8 +8,8 @@
     </section>
 
     <div id="portfolio" class="portfolio-grid">
-      <template v-for="portfolio in data">
-        <PortfolioCard :portfolio="portfolio" />
+      <template v-for="(portfolio, index) in data" :key={index}>
+        <PortfolioCard  :portfolio="portfolio" :playing="current === index" @play="play" :id="index" />
       </template>
     </div>
 
@@ -25,6 +25,8 @@
 
 
 <script setup>
+
+  import PortfolioCard from '~/components/PortfolioCard.vue';
   
   const domain = 'https://zeus-moose.github.io/'
   
@@ -44,13 +46,15 @@
       { property: 'og:image', content: `${domain}assets/images/zeus_moose.png`},
     ]
   })
-</script>
-<script>
-import PortfolioCard from '~/components/PortfolioCard.vue';
-export default {
-  components: {
-    PortfolioCard
-  }
-}
+
+  const current = ref(0)
+  
+  const play = (id) => {
+      if (id > data.length) {
+        current.value = 0
+      } else {
+        current.value = id
+      }
+    }
 </script>
 

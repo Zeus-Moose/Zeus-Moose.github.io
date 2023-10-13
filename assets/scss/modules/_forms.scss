@@ -52,16 +52,6 @@ label.full {
 input.full {
   width: 100% !important;
 }
-.monkey {
-  pointer-events:none;
-  position: absolute;
-  right: 0.5em;
-  color: $grey-dark;
-  bottom: 0.5em;
-  margin: 0;
-  cursor: text;
-  height: 1.5em;
-}
 /*
  * 1. Correct font-size not inheriting in all browsers
  * 2. Remove margins in FF3/4 S5 Chrome
