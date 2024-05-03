@@ -51,9 +51,6 @@
         color: $green;
         text-shadow: 1px 1px 3px $black;
       }
-      .intro {
-        max-height: 100% !important;
-      }
       .section_image:after {
         top: -200%;
         height: 500%;
@@ -63,8 +60,8 @@
 
   .block .intro {
     z-index: 2;
-    max-height: 0;
-    transition: max-height ease-in-out 0.5s;
+    height: 0;
+    transition: height ease-in-out 0.25s;
     p {
       bottom: 0;
       padding: 0 1rem 1rem;
@@ -80,9 +77,6 @@ body.noscript {
       top: -10%;
       height: 150%;
     }
-    .intro {
-      max-height: 100% !important;
-    }
   }
 }
 @media (hover: none) {
@@ -91,9 +85,6 @@ body.noscript {
     .section_image:after {
       top: -10%;
       height: 150%;
-    }
-    .intro {
-      max-height: 100% !important;
     }
   }
 }

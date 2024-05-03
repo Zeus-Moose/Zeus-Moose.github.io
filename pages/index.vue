@@ -8,7 +8,7 @@
     </section>
 
     <div id="portfolio" class="portfolio-grid">
-      <template v-for="portfolio in data">
+      <template v-for="(portfolio, index) in data" :key="index">
         <PortfolioCard :portfolio="portfolio" />
       </template>
     </div>
@@ -25,8 +25,10 @@
 
 
 <script setup>
-  
+  import { videoLoops } from '@/helpers/utilities.js'
+
   const domain = 'https://zeus-moose.github.io/'
+
   
   const { data } = await useAsyncData(() => queryContent('/portfolio/').find())
 
@@ -44,12 +46,20 @@
       { property: 'og:image', content: `${domain}assets/images/zeus_moose.png`},
     ]
   })
+
+  onMounted(() => {
+    videoLoops()
+  })
 </script>
 <script>
+import { onMounted } from 'vue';
 import PortfolioCard from '~/components/PortfolioCard.vue';
 export default {
   components: {
     PortfolioCard
+  },
+
+  methods: {
   }
 }
 </script>

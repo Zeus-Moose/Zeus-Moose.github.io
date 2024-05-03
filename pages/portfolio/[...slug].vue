@@ -24,6 +24,7 @@
 
 
 <script setup>
+  import { videoLoops } from '@/helpers/utilities.js'
 
   const domain = 'https://zeus-moose.github.io/'
 
@@ -66,6 +67,11 @@
       { property: 'og:image', content: `${domain}assets/images/covers/${page.value?.image}`},
       { name: 'twitter:image', content: `${domain}assets/images/covers/${page.value?.image}`},
     ]
+  })
+
+
+  onMounted(() => {
+    videoLoops()
   })
 
 </script>

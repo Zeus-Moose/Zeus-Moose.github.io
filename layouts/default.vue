@@ -103,5 +103,6 @@ export default {
       this.showMenu = !this.showMenu
     }
   }
+  
 }
 </script>
