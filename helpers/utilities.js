@@ -11,10 +11,8 @@ export const videoLoops = function () {
             item.currentTime = 0
 
             if (card.classList.contains('active-video')) {
-                console.log('item.play')
                 item.play()
             } else {
-                console.log('playnext')
                 playNext()
             }
         })

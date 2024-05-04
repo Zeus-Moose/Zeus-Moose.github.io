@@ -82,6 +82,9 @@ body.noscript {
 @media (hover: none) {
   .portfolio-grid {
     z-index: 9;
+    .block .intro {
+      height: auto !important;
+    }
     .section_image:after {
       top: -10%;
       height: 150%;
@@ -140,6 +143,7 @@ body.noscript {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      
     }
     h1 {
       z-index: 1;
@@ -158,20 +162,6 @@ body.noscript {
   float: right;
   margin-top: .5rem;
   text-decoration: none;
-}
-
-.scroll-image {
-  animation: 20s ease-in-out scrollImage infinite;
-  animation-direction: alternate;
-}
-@keyframes scrollImage {
-  0% {
-    background-position: center 0;
-  }
-  100% {
-    background-position: center 100%;
-  }
-
 }
 
 .min-section-heading {
