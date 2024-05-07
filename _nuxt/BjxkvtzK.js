@@ -1,0 +1,1 @@
+import{j as o,o as r,a as s,a4 as t}from"./CidNCOIb.js";const a={};function n(e,c){return r(),s("p",null,[t(e.$slots,"default")])}const f=o(a,[["render",n]]);export{f as default};
