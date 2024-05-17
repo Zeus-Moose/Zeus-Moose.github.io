@@ -7,8 +7,7 @@
 
 
 <script setup>
-  const domain = 'https://zeus-moose.github.io/'
-
+  const runtimeConfig = useRuntimeConfig()
   const { path } = useRoute()
   const { data, error } = await useAsyncData(`${path}`, () => {
     return queryContent().where({ _path: path }).findOne()
@@ -30,8 +29,8 @@
       { property: 'og:description', content: data.value?.description },
       { name: 'twitter:description', content: data.value?.description },
       
-      { name: 'twitter:image', content: `${domain}assets/images/zeus_moose.png`},
-      { property: 'og:image', content: `${domain}assets/images/zeus_moose.png`},
+      { name: 'twitter:image', content: `${runtimeConfig.public.domain}assets/images/zeus_moose.png`},
+      { property: 'og:image', content: `${runtimeConfig.public.domain}assets/images/zeus_moose.png`},
     ]
   })
 </script>

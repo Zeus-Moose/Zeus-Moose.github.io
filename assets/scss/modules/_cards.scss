@@ -7,7 +7,7 @@
     border-radius: 2px;
     padding: 0 1rem .5rem;
     background: #FFF;
-    border: 1px solid #CCC;
+    box-shadow: $box-shadow-inset;
     overflow: hidden;
     h3 {
       margin: 0 0 1rem;

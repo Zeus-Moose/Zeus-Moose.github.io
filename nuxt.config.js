@@ -17,7 +17,8 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'format-detection', content: 'telephone=no' }
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'color-scheme', content: 'light only' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -25,6 +26,12 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: '/assets/favicon/apple-touch-icon.png' },
         { rel: 'manifest', href: '/assets/zm.webmanifest' }
       ]
+    }
+  },
+  
+  runtimeConfig: {
+    public: {
+      domain: "https://zeus-moose.github.io/",
     }
   },
 
@@ -67,8 +74,8 @@ export default defineNuxtConfig({
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxt/image',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -81,6 +88,10 @@ export default defineNuxtConfig({
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     
+  },
+
+  image: {
+    provider: 'ipxStatic',
   },
 
   routeRules: {

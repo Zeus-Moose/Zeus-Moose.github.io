@@ -1,7 +1,7 @@
 <template>
     <article class="block block_link mini_block" :class="cardSize">
         <div class="section_image">
-            <video muted="true" :poster="`/assets/images/covers/${portfolio.thumbnail}`">
+            <video muted="true" :autoplay="preload" :poster="poster">
                 <source type="video/webm" :src="`/assets/videos/${portfolio.video_thumb}`">
                 <source type="video/mp4" :src="`/assets/videos/${portfolio.video_thumb.replace('.webm', '.mp4')}`">
             </video>
@@ -17,11 +17,15 @@
 
 <script>
 export default {
-    props: ['portfolio'],
+    props: ['portfolio', 'preload'],
     computed: {
         cardSize() {
             return this.portfolio.card_size ?? ''
-        }
+        },
+        poster() {
+            const img = useImage()
+            return img(`/assets/images/covers/${this.portfolio.thumbnail}`)
+        },
     }
 }
 </script>

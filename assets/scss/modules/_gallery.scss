@@ -68,3 +68,12 @@
     }
   }
 }
+
+
+.screenshot {
+  margin: 1rem 0 2rem;
+  img {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+}

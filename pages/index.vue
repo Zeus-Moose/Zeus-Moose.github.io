@@ -9,7 +9,7 @@
 
     <div id="portfolio" class="portfolio-grid">
       <template v-for="(portfolio, index) in data" :key="index">
-        <PortfolioCard :portfolio="portfolio" />
+        <PortfolioCard :portfolio="portfolio" :preload="index === 0"/>
       </template>
     </div>
 
@@ -27,11 +27,10 @@
 <script setup>
   import { videoLoops } from '@/helpers/utilities.js'
 
-  const domain = 'https://zeus-moose.github.io/'
-
+  const runtimeConfig = useRuntimeConfig()
   
   const { data } = await useAsyncData(() => queryContent('/portfolio/').find())
-
+  const portfolioItems = toRaw(data.value)
   useHead({
     title: `Zeus Moose`,
     meta: [
@@ -42,10 +41,15 @@
       { property: 'og:description', content: 'Hi, I\'m Ben. I have over fifteen year\'s experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.' },
       { name: 'twitter:description', content: 'Hi, I\'m Ben. I have over fifteen year\'s experience making websites and web-apps. I bring web technologies into the real world, making user engagement interactive through touch, movement, and sound.' },
       
-      { name: 'twitter:image', content: `${domain}assets/images/zeus_moose.png`},
-      { property: 'og:image', content: `${domain}assets/images/zeus_moose.png`},
+      { name: 'twitter:image', content: `${runtimeConfig.public.domain}assets/images/zeus_moose.png`},
+      { property: 'og:image', content: `${runtimeConfig.public.domain}assets/images/zeus_moose.png`},
+    ],
+    link: [
+      { rel: 'preload', as: 'image', href: `${runtimeConfig.public.domain}${portfolioItems[0].thumbnail}` }
     ]
   })
+  
+
 
   onMounted(() => {
     videoLoops()

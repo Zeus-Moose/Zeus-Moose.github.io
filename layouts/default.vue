@@ -90,7 +90,6 @@ export default {
   },
   methods: {
     menuLeave () {
-      console.log(this.error)
       clearTimeout(this.menuTimer)
       this.menuTimer = setTimeout(() => {
         this.showMenu = false

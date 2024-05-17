@@ -64,6 +64,7 @@ body, button, input, select, textarea { color: $black; }
     color: $black;
     cursor: pointer;
     border-bottom: 3px solid $pink;
+    transition: border ease $animation-time;
   }
   a:hover {
     border-bottom: 3px solid $green;

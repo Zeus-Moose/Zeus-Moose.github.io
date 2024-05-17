@@ -25,10 +25,8 @@
 
 <script setup>
   import { videoLoops } from '@/helpers/utilities.js'
-
-  const domain = 'https://zeus-moose.github.io/'
-
   
+  const runtimeConfig = useRuntimeConfig()
   const { path } = useRoute()
   const { data: page, error } = await useAsyncData(() => {
     return queryContent().where({ _path: path }).findOne()
@@ -64,8 +62,8 @@
       { property: 'og:description', content: page.value?.description },
       { name: 'twitter:description', content: page.value?.description },
       
-      { property: 'og:image', content: `${domain}assets/images/covers/${page.value?.image}`},
-      { name: 'twitter:image', content: `${domain}assets/images/covers/${page.value?.image}`},
+      { property: 'og:image', content: `${runtimeConfig.public.domain}assets/images/covers/${page.value?.image}`},
+      { name: 'twitter:image', content: `${runtimeConfig.public.domain}assets/images/covers/${page.value?.image}`},
     ]
   })
 
