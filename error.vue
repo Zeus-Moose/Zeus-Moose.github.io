@@ -6,7 +6,7 @@
         <p>Unfortunately the page you requested could not be found. Despite their best efforts neither Zeus nor Moose could find it.</p>
         <p>Maybe it never existed at all.</p>
         <p>
-          <NuxtLink to="/">Back to portfolio</NuxtLink>
+          <NuxtLink to="/">‹ Back to portfolio</NuxtLink>
         </p>
       </div>
       <div v-else>

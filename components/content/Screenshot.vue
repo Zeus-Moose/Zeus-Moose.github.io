@@ -1,6 +1,6 @@
 <template>
     <div class="screenshot">
-        <img :src="image" :alt="alt">
+        <nuxt-picture :src="image" :alt="alt" format="webp,avif" />
         <p class="caption" v-if="title">{{ title }}</p>
     </div>
 </template>

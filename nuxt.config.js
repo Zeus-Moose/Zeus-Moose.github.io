@@ -91,7 +91,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'ipxStatic',
+    format: ['webp']
   },
 
   routeRules: {
