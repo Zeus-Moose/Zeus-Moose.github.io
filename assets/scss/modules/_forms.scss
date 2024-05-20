@@ -176,6 +176,7 @@ input[type="submit"] {
   display: inline-block;
   text-decoration: none;
   transition: all ease-in-out $animation-time;
+  position: relative;
   &:hover {
     border-color: $green;
     box-shadow:0 1px 3px #aaa;
