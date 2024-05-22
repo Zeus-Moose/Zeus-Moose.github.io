@@ -100,12 +100,12 @@ blockquote {
   }
   &:before {
     content: '“';
-    left: -.75em;
+    left: 0;
     top: 0;
   }
   &:after {
     content: '”';
-    right: -.5em;
+    right: 0;
     bottom: -1rem;
   }
 }
@@ -124,6 +124,7 @@ hr {
   margin: 1rem 0;
 }
 .zeus-moose-hr {
+  margin: 1rem 0;
   position: relative;
   hr {
   height: 0;
@@ -185,7 +186,7 @@ h4 {
 #main-container ul {
   padding-left: 1.5em;
   list-style: disc;
-  margin: 0 0 .5em;
+  margin-bottom: .5em;
 }
 
 @media #{$medium-up} {
@@ -219,4 +220,16 @@ h4 {
 ::selection,
 ::-moz-selection {
   background: rgba($pink, 0.5);
+}
+
+
+.portfolio-page {
+  p, h1, h2, h3, h4, h5, ul, ol {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    @media #{$medium-up} {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
 }

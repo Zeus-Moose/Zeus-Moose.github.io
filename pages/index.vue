@@ -45,7 +45,7 @@
       { property: 'og:image', content: `${runtimeConfig.public.domain}assets/images/zeus_moose.png`},
     ],
     link: [
-      { rel: 'preload', as: 'image', href: `${runtimeConfig.public.domain}${portfolioItems[0].thumbnail}` }
+      { rel: 'preload', as: 'image', href: `${runtimeConfig.public.domain}assets/images/covers/${portfolioItems[0].thumbnail}` }
     ]
   })
   
