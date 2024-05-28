@@ -13,7 +13,7 @@
     <HR />
     <section class="portfolio-bottom wrapper">
       <nuxt-link class="back-to-portfolio-link" to="/#portfolio">‹ Back to portfolio</nuxt-link>
-      <h3>Other work</h3>
+      <h2>Other work</h2>
       <div class="portfolio-grid">
         <PortfolioCard key="portfolio-1" :portfolio="allContent[0]" />
         <PortfolioCard key="portfolio-2" :portfolio="allContent[1]" />
