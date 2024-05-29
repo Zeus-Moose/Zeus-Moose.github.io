@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   
   runtimeConfig: {
     public: {
-      domain: "https://zeus-moose.github.io/",
+      domain: "https://www.zeusmoose.com/",
     }
   },
 

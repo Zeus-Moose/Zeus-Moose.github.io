@@ -8,6 +8,8 @@ I make websites, web-apps, and am passionate about bringing web technologies int
 
 ### Creativity
 
+
+
 I have a degree in Digital Screen Arts, and enjoy using my skills to help clients develop their ideas into something they love.
 
 ### Technology
