@@ -35,6 +35,7 @@
     throw createError({
       statusCode: 404,
       message: 'not found',
+      fatal: true,
     })
   }
   let { data: allContent } = await useAsyncData(() => {

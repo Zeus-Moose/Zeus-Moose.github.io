@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate && gh-pages -d .output/public -t true",
+    "deploy": "nuxt generate && echo 'www.zeusmoose.com' > .output/public/CNAME && gh-pages -d .output/public -t true",
     "videos": "sh ./scripts/videos.sh"
   },
   "dependencies": {

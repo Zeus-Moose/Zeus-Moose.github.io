@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   generate:{
       nojekyll: true,
+      fallback: true,
   },
   app: {
     head: {
