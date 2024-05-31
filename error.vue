@@ -17,6 +17,12 @@
   </NuxtLayout>
 </template>
 
+<script setup>
+  useHead({
+    title: `Four oh four | Zeus Moose`,
+    bodyAttrs: { class: 'fourohfour' }
+  })
+</script>
 <script>
 export default {
   props: ['error']

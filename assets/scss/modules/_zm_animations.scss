@@ -190,10 +190,11 @@ body.blink-moose #footer-moose-shrug,
 #footer-moose-shrug {
   .footer-moose-arm {
     transition: all ease-in-out 0.5s;
+    transform-origin: 50%;
   }
   &:hover {
     .footer-moose-arm {
-      transform: translate(-0.1rem, -0.25rem);
+      transform: translate(0, -0.2rem);
     }
   }
 }

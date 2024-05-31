@@ -50,8 +50,10 @@
         <div id="footer-middle" />
         <div id="footer-background">
           <div id="zeus_peek">
-            <ZeusPeek v-if="true" />
-            <MooseShrug v-else />
+            <ZeusPeek />
+          </div>
+          <div id="moose_shrug">
+            <MooseShrug />
           </div>
         </div>
 
