@@ -12,7 +12,8 @@ I make websites, web-apps, and am passionate about bringing web technologies int
 
 I have a degree in Digital Screen Arts, and enjoy using my skills to help clients develop their ideas into something they love.
 
-##
+## Technical
+
 For most of my website projects I use WordPress or Drupal, but I'm also keen to promote the expansion of web technologies beyond the web, like with [Ever After](/portfolio/ever-after) where I created an interactive exhibition running on a series of web pages.
 
 Like acronyms and buzz-words? Here's a list of the main technologies and tools I use:

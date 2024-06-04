@@ -8,6 +8,8 @@ export const videoLoops = function () {
         const card = item.parentNode.parentNode
         const intro = card.getElementsByClassName('intro')[0]
         item.addEventListener('ended', () => {
+            item.play()
+            item.pause()
             item.currentTime = 0
 
             if (card.classList.contains('active-video')) {

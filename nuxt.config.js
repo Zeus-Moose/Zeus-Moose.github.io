@@ -29,7 +29,9 @@ export default defineNuxtConfig({
       ]
     }
   },
-  
+  site: {
+    url: 'https://www.zeusmoose.com',
+  },
   runtimeConfig: {
     public: {
       domain: "https://www.zeusmoose.com/",
