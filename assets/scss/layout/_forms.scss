@@ -1,0 +1,28 @@
+.button,
+input[type="button"],
+input[type="submit"] {
+  width: auto;
+  box-shadow: none;
+  margin: 1em auto;
+  background: $white;
+  border: 1px solid $pink;
+  border-radius: $border-radius;
+  color: $pink;
+  padding: 0.5em 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all ease-in-out $animation-time;
+  position: relative;
+  &:hover {
+    border-color: $green;
+    box-shadow:0 1px 3px #aaa;
+    color: $green;
+  }
+  &:active {
+    transform: scale(0.97) translateY(3px);
+  }
+}
+
+input:not([type="submit"]):not([type="checkbox"]):focus, select:focus, option:hover, textarea:focus {
+  background: $pink-light;
+}
