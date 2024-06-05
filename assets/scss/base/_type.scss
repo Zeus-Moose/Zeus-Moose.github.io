@@ -193,34 +193,6 @@ h4 {
   margin-bottom: .5em;
 }
 
-@media #{$medium-up} {
-  .float-left {
-    float: left;
-    margin: 0 1rem 0 -5rem;
-  }
-  .float-right {
-    float: left;
-    margin: 0 -5rem 0 1rem;
-  }
-}
-.float-right,
-.float-left {
-  text-align: center;
-  p {
-    font-style: italic;
-    display: block;
-    font-size: 0.9em;
-  }
-}
-
-.caption {
-  text-align: center;
-  font-style: italic;
-  display: block;
-  font-size: 0.9em;
-  margin: 0.5rem 0 0;
-}
-
 ::selection,
 ::-moz-selection {
   background: rgba($pink, 0.5);

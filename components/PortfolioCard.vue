@@ -1,7 +1,7 @@
 <template>
     <article class="block block_link mini_block" :class="cardSize">
         <div class="section_image">
-            <video muted="true" :poster="`/assets/images/covers/${portfolio.thumbnail}`">
+            <video muted playsinline :poster="`/assets/images/covers/${portfolio.thumbnail}`">
                 <source type="video/webm" :src="`/assets/videos/${portfolio.video_thumb}`">
                 <source type="video/mp4" :src="`/assets/videos/${portfolio.video_thumb.replace('.webm', '.mp4')}`">
             </video>

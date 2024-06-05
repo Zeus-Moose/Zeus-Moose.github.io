@@ -14,10 +14,10 @@
     </div>
 
     <section id="outro" class="wrapper page">
-      <h2> Like what you see?</h2>
+      <h2>Like what you see?</h2>
       <p>
         If you'd like to know more about any of these projects please don't hesitate to get in <NuxtLink to="contact">contact</NuxtLink>,
-        or have a look at my full list of <NuxtLink to="about">services</NuxtLink>.
+        or have a look at my full list of <NuxtLink to="about">skills</NuxtLink>.
       </p>
     </section>
   </div>

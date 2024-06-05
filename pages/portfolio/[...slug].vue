@@ -3,7 +3,7 @@
     <div class="portfolio-page">
       <div class="section_image">
         <h1 v-html="page.title"></h1>
-        <video muted="true" autoplay="true" loop="true" :poster="`/assets/images/covers/${page.image}`">
+        <video muted autoplay playsinline loop :poster="`/assets/images/covers/${page.image}`">
           <source type="video/webm" :src="`/assets/videos/${page.video}`" />
           <source type="video/mp4" :src="`/assets/videos/${page.video.replace('.webm', '.mp4')}`">
         </video>

@@ -188,13 +188,18 @@ body.blink-moose #footer-moose-shrug,
   }
 }
 #footer-moose-shrug {
-  .footer-moose-arm {
+  .footer-moose-arm-l,
+  .footer-moose-arm-r {
     transition: all ease-in-out 0.5s;
-    transform-origin: 50%;
+    transform-origin: 50% 80%;
+    transform: translate(0, 0.1rem)
   }
   &:hover {
-    .footer-moose-arm {
-      transform: translate(0, -0.2rem);
+    .footer-moose-arm-l {
+      transform: translate(0, 0) rotateZ(-10deg);
+    }
+    .footer-moose-arm-r {
+      transform: translate(0, 0) rotateZ(10deg);
     }
   }
 }
