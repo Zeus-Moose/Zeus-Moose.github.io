@@ -4,14 +4,13 @@ page_title: I love combining technology and creativity
 description: I make websites, web-apps, and am passionate about bringing web technologies into the real world.
 ---
 
-I make websites, web-apps, and am passionate about bringing web technologies into the real world.
+I tell stories, make websites, and am passionate about bringing web technologies into the real world.
 
 ## Creativity
 
-I have a passion for creativity, beyond creative problem solving. 
-I love using technology in creative and engaging ways. I'm passionate about story telling, [designing escape rooms](/portfolio/20000-leagues), and writing. And I think it is best when these can be combined together to create powerful immersive experience both online and in the real world.
+I'm passionate about writing, story telling, and using technology in creative and engaging ways. I relish combining these skills to create powerful immersive experiences both online and in the real world. My current favorites are [treasure hunts](/portfolio/trove) and [escape rooms](/portfolio/20000-leagues)
 
-And if you like formal qualification, I have a degree in Digital Screen Arts from The University College of the Creative Arts.
+And if you are interested in formal qualification, I have a degree in Digital Screen Arts from The University College of the Creative Arts.
 
 ## Technical
 

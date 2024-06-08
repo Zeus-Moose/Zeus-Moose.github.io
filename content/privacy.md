@@ -9,7 +9,7 @@ We do not collect any personally identifiable information. We collect anonymised
 
 ### What do we use your information for?
 
-Any of the information we collect from you will be used to improve our website (we continually strive to improve our website offerings based on the information and feedback we receive from you)
+Any of the information we collect from you will be used to improve our website (we continually strive to improve our website offerings based on the information and feedback we receive from you).
 
 ### Do we use cookies?
 
@@ -22,7 +22,10 @@ We do not sell, trade, or otherwise transfer to outside parties your personally 
 ### Where is the data stored?
 
 This Website is hosted as a [GitHub Pages website](https://help.github.com/en/github/site-policy/github-privacy-statement). GitHub may collect User Personal Information from visitors to this GitHub Pages website, including logs of visitor IP addresses, to comply with legal obligations, and to maintain the security and integrity of this Website and the Service.
+
 Our email is managed by [ProtonMail](https://proton.me/) in Switzerland.
+
+And we use self-hosted [Matomo](https://matomo.org/) analytics hosted in France.
 
 ### Third party links
 
@@ -36,7 +39,7 @@ By using our site, you consent to our websites privacy policy.
 
 If we decide to change our privacy policy, we will post those changes on this page.
 
-This policy was last modified on 19th September 2023.
+This policy was last modified on 4th June 2024.
 
 ### Contacting us
 
