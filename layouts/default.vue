@@ -42,9 +42,8 @@
             </NuxtLink>
           </p>
           <p>
-            unless otherwise stated, all content <span class="copyright">©</span> {{ new Date().getFullYear()
-            }} Ben
-            Newton
+            unless otherwise stated, all content <span class="copyright">©</span> 2012 - {{ new Date().getFullYear()
+            }}
           </p>
         </footer>
         <div id="footer-middle" />
