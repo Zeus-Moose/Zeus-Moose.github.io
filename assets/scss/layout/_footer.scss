@@ -14,12 +14,12 @@
   clip-path: polygon(0 0,0 100%,100% 100%, 100% 0);
   overflow: hidden;
   height: 14.4rem;
-  @media #{$medium-up} {
-    height: 16.4rem;
-  }
   width: 60rem;
   max-width: 140%;
   position: relative;
+  @media #{$medium-up} {
+    height: 16.4rem;
+  }
 
   #footer-inside {
     display: block;

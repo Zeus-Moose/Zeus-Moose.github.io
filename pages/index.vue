@@ -52,7 +52,7 @@
 
 
   onMounted(() => {
-    videoLoops()
+    setTimeout(() => videoLoops(), 50)
   })
 </script>
 <script>
