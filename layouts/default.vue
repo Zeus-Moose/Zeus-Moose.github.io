@@ -66,16 +66,6 @@
   </div>
 </template>
 
-<script setup>
-  const nuxtApp = useNuxtApp();
-  nuxtApp.hook("page:start", () => {
-    var _paq = window._paq = window._paq || [];
-    _paq.push(['trackPageView']);
-  });
-  useHead({
-    script: [{ children: "var _paq = window._paq = window._paq || []; _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); (function() { var u='https://analytics.zeusmoose.com/'; _paq.push(['setTrackerUrl', u+'matomo.php']); _paq.push(['setSiteId', '2']); var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s); })();" }]
-  });
-</script>
 <script>
 import ZeusMooseLogo from '../components/ZeusMooseLogo.vue'
 import ZeusPeek from '../components/ZeusPeek.vue'

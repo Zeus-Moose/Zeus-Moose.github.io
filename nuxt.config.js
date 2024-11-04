@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     public: {
       domain: "https://www.zeusmoose.com/",
       posthogPublicKey: 'phc_z81Wb05D7v0G6vI7jgsp1D1HgVCMEuFSQBvWiIZsMCF',
-      posthogHost: 'https://zeusmoose-analytics.zeusmoose.workers.dev'
+      posthogHost: 'https://analytics.zeusmoose.com'
     }
   },
 
