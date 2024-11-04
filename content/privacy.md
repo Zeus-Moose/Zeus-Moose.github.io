@@ -5,15 +5,11 @@ description:
 
 ### What information do you collect?
 
-We do not collect any personally identifiable information. We collect anonymised IP addresses, date & time, basic browser information, and similar information when you use our website.
+We do not collect any personally identifiable information. We collect anonymised IP addresses, date & time, basic browser information, and similar information when you use our website. And some of our service providers may also collect similar information (see below).
 
 ### What do we use your information for?
 
 Any of the information we collect from you will be used to improve our website (we continually strive to improve our website offerings based on the information and feedback we receive from you).
-
-### Do we use cookies?
-
-No, we do not use cookies.
 
 ### Do we disclose any information to outside parties?
 
@@ -25,7 +21,7 @@ This Website is hosted as a [GitHub Pages website](https://help.github.com/en/gi
 
 Our email is managed by [ProtonMail](https://proton.me/) in Switzerland.
 
-And we use self-hosted [Matomo](https://matomo.org/) analytics hosted in France.
+And we use PostHog [Matomo](https://posthog.com/) for analytics hosted in the EU.
 
 ### Third party links
 
@@ -39,7 +35,7 @@ By using our site, you consent to our websites privacy policy.
 
 If we decide to change our privacy policy, we will post those changes on this page.
 
-This policy was last modified on 4th June 2024.
+This policy was last modified on 4th November 2024.
 
 ### Contacting us
 
